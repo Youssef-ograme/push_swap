@@ -1,4 +1,4 @@
-#include "../hedear.h"
+#include "hedear.h"
 void pb(stack **a_b , stack **s_a)
 {
     stack *temp;

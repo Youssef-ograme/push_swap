@@ -20,7 +20,7 @@ void rb(stack **head);
 void rr(stack **head , stack **head1);
 void rra(stack **head);
 void rrb(stack **head);
-void rrr(stack *head , stack *head1);
+void rrr(stack **s_a , stack **s_b);
 void sa(stack **head);
 void sb(stack **head);
 void ss(stack **head , stack **head1);

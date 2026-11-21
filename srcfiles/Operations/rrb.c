@@ -1,4 +1,4 @@
-#include "../hedear.h"                     
+#include "hedear.h"                     
 stack	*last_node(stack *s_b)           
 {                                         
                                           

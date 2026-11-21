@@ -1,4 +1,4 @@
-#include "../hedear.h"
+#include "hedear.h"
 void rr(stack **s_a , stack **s_b)
 {
     ra(s_a);

@@ -1,4 +1,4 @@
-#include "../hedear.h"
+#include "hedear.h"
 void sb(stack **head)
 {
     stack *node3;

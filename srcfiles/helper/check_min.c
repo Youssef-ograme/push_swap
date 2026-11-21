@@ -1,4 +1,4 @@
-#include "../hedear.h"
+#include "hedear.h"
 
 int check_MIN (stack *S_a)
 {
