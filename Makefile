@@ -22,9 +22,15 @@ SRCES = $(SRCF)/check_error/check.c \
 		$(SRCF)/Operations/sa.c \
 		$(SRCF)/Operations/sb.c \
 		$(SRCF)/Operations/ss.c \
-		$(SRCF)/helper/check_min.c \
-		$(SRCF)/helper/compute_disorder.c \
-		$(SRCF)/helper/is_sorted.c
+		$(SRCF)/helper/return_min.c \
+		$(SRCF)/helper/index_min.c \
+		$(SRCF)/helper/count_nodes.c \
+		$(SRCF)/helper/sort_three.c \
+		$(SRCF)/helper/sort_two.c \
+		$(SRCF)/helper/is_sorted.c \
+		$(SRCF)/helper/ft_putstr.c
+
+
 
 OBJECTS = $(SRCES:.c=.o)
 

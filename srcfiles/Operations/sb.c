@@ -10,4 +10,5 @@ void sb(stack **head)
     (*head) -> next = node3;
     node2 -> next = (*head);
     *head = node2;
+    ft_putstr("sb\n");
 }
