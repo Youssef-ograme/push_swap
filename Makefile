@@ -31,6 +31,7 @@ SRCES = $(SRCF)/check_error/check.c \
 		$(SRCF)/helper/is_sorted.c \
 		$(SRCF)/helper/ft_putstr.c \
 		$(SRCF)/strategies/Algo_simple/simple.c \
+		$(SRCF)/strategies/Algo_complex/complex.c \
 		$(SRCF)/create_nodes/ft_lstadd_back.c \
 		$(SRCF)/create_nodes/ft_lstnew.c \
 		$(SRCF)/create_nodes/ft_lstlast.c \
