@@ -18,7 +18,7 @@ int main(int argc , char **argv)
     stack *s_b;
     s_b = NULL;
     s_a =  return_nodes(argc ,argv);
-    quick_sort(&s_a , 0 , argc - 1);
+    quick_sort(&s_a , &s_b , 0 , argc - 2);
     while(s_a)
     {
         printf("%d\n",s_a -> nb);
