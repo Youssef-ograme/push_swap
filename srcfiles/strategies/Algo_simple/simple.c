@@ -53,7 +53,7 @@ static void min_in_top(stack **s_a)
 }
 
 
-void simple_algo(stack **s_a , stack **s_b)
+static void base_algo (stack **s_a , stack **s_b)
 {
     int res;
     int temp;
@@ -79,7 +79,10 @@ void simple_algo(stack **s_a , stack **s_b)
         temp--;
     }
 }
- 
+void simple_algo (stack **list)
+{
+   base_algo(list , NULL);
+}
 // #include <stdio.h>
 // int main()
 // {
