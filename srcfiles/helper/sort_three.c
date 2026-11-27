@@ -1,5 +1,5 @@
 #include "hedear.h"
-static void swap_h(stack **head)
+static void swap_h(t_stack **head)
 {
     rra(head);
     ft_putstr("rra\n");
@@ -7,11 +7,11 @@ static void swap_h(stack **head)
     ft_putstr("sa\n");
 }
 
-void sort_three(stack **head)
+void sort_three(t_stack **head)
 {
-    stack *start;
-    stack *second;
-    stack *min;
+    t_stack *start;
+    t_stack *second;
+    t_stack *min;
 
     min = return_min(*head);
     start = (*head);
@@ -41,9 +41,9 @@ void sort_three(stack **head)
 // #include <stdio.h>
 // int main()
 // {
-//     stack *head = malloc(sizeof(stack));
-//     stack *node1 = malloc(sizeof(stack));
-//     stack *node2 = malloc(sizeof(stack));
+//     t_stack *head = malloc(sizeof(t_stack));
+//     t_stack *node1 = malloc(sizeof(t_stack));
+//     t_stack *node2 = malloc(sizeof(t_stack));
 //     head->nb =  56454545;
 //     node1->nb =  -10;
 //     node2->nb =  0;

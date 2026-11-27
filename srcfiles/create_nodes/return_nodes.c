@@ -1,8 +1,8 @@
 #include "hedear.h"
-stack *return_nodes(int argc , char **argv )
+t_stack *return_nodes(int argc , char **argv )
 {
-    stack *res;
-    stack *node;
+    t_stack *res;
+    t_stack *node;
     res = NULL;
     int i;
     i = 1;

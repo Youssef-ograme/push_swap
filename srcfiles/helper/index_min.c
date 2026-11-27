@@ -1,7 +1,7 @@
 #include "hedear.h"
-int index_min(stack *head)
+int index_min(t_stack *head)
 {
-    stack *min_node;
+    t_stack *min_node;
     int index;
     min_node = return_min(head);
     index = 0;

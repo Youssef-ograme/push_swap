@@ -1,5 +1,5 @@
 #include "hedear.h"
-void ss(stack **head , stack **head1)
+void ss(t_stack **head , t_stack **head1)
 {
     sa(head);
     sb(head1);

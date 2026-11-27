@@ -1,7 +1,7 @@
 #include "hedear.h"
-void pb(stack **s_a , stack **s_b)
+void pb(t_stack **s_a , t_stack **s_b)
 {
-    stack *temp;
+    t_stack *temp;
     if (!s_b || !s_a || !*s_a)
         return;
     temp = *s_a;

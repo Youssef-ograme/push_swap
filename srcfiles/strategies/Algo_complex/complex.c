@@ -5,12 +5,12 @@
     int nb;
     int index;
     struct list *next;
-}stack;
+}t_stack;
 
-int great_nb(stack *s_a)
+int great_nb(t_stack *s_a)
 {
 	int max;
-	stack *node1;
+	t_stack *node1;
 
 	max = s_a -> nb;
 	node1 =  s_a;
@@ -33,7 +33,7 @@ int call_f(int nb)
 	}
 	return call + 1;
 }
-static stack	*ft_lstlast(stack *lst)
+static t_stack	*ft_lstlast(t_stack *lst)
 {
 	if (!lst)
 		return (NULL);
@@ -69,9 +69,9 @@ static long ft_atoi(char *str)
         return (2147483648);
     return res * (kayn);
 }
-static void	ft_lstadd_back(stack **lst, stack *new)
+static void	ft_lstadd_back(t_stack **lst, t_stack *new)
 {
-	stack	*last;
+	t_stack	*last;
 
 	if (!lst || !new)
 		return ;
@@ -83,11 +83,11 @@ static void	ft_lstadd_back(stack **lst, stack *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
-static stack	*ft_lstnew(int n)
+static t_stack	*ft_lstnew(int n)
 {
-	stack	*new;
+	t_stack	*new;
 
-	new = malloc(sizeof(stack));
+	new = malloc(sizeof(t_stack));
 	if (!new)
 		return (NULL);
 	new-> nb = n;
@@ -95,10 +95,10 @@ static stack	*ft_lstnew(int n)
 	new->next = NULL;
 	return (new);
 }
-static stack *return_nodes(int argc , char **argv )
+static t_stack *return_nodes(int argc , char **argv )
 {
-    stack *res;
-    stack *node;
+    t_stack *res;
+    t_stack *node;
     res = NULL;
     int i;
     i = 1;
@@ -110,7 +110,7 @@ static stack *return_nodes(int argc , char **argv )
     }
     return res;
 } 
-static int count_nodes(stack *head)
+static int count_nodes(t_stack *head)
 {
     int count;
     count = 0;
@@ -121,7 +121,7 @@ static int count_nodes(stack *head)
     }
     return count;
 }
-// static stack *get_node(stack  *head , int nb)
+// static t_stack *get_node(t_stack  *head , int nb)
 // {
 // 	int n;
 // 	while(head )
@@ -134,9 +134,9 @@ static int count_nodes(stack *head)
 // 	return NULL;
 // }
 /**/
-int *create_arr(stack *head , int x)
+int *create_arr(t_stack *head , int x)
 {
-	stack *node;
+	t_stack *node;
 	int size;
 	size = count_nodes(head);
 	int *arr;
@@ -147,7 +147,7 @@ int *create_arr(stack *head , int x)
 	int i;
 	i = 0;
 	node = head;
-	stack *temp;
+	t_stack *temp;
 	temp = node;
 	while(node)
 	{
@@ -164,7 +164,7 @@ int *create_arr(stack *head , int x)
 	return arr;
 }
  
-void get_lcd(stack **s_a   )
+void get_lcd(t_stack **s_a   )
 {
 	int max ;
 	int call;
@@ -198,7 +198,7 @@ int main(int argc , char **argv)
     if(argc == 1)
         return 0;
    
-    stack *s_a;
+    t_stack *s_a;
      
     s_a =  return_nodes(argc ,argv);
      get_lcd(&s_a );

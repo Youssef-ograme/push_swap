@@ -8,9 +8,9 @@ static void	chunk_update(int *max, int *push, int som, int total)
 		*max = total - 1;
 }
 
-t_indx	*res_from_stack_B(stack *list, t_indx *stack_b , int *tt)
+t_stack	*res_from_stack_B(t_stack *list, t_stack *stack_b , int *tt)
 {
-	t_indx	*stack_a;
+	t_stack	*stack_a;
 	int		som;
 	int		max;
 	int		push;
@@ -25,11 +25,11 @@ t_indx	*res_from_stack_B(stack *list, t_indx *stack_b , int *tt)
 	{
 		if (stack_a->index <= max)
 		{
-			pb_index(&stack_a, &stack_b);
+			pb(&stack_a, &stack_b);
 			push++;
 		}
 		else
-			ra_index(&stack_a);
+			ra(&stack_a);
 		if (push == som)
 			chunk_update(&max, &push, som, total);
 	}

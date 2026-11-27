@@ -1,5 +1,5 @@
 #include "hedear.h"
-static int return_nothing(stack **s_a , stack **s_b)
+static int return_nothing(t_stack **s_a , t_stack **s_b)
 {
     if(!s_a || !s_b)
         return 1;
@@ -17,7 +17,7 @@ static int return_nothing(stack **s_a , stack **s_b)
     }
     return 0;
 }
-static void shift_all(stack **s_a , int index , int nb)
+static void shift_all(t_stack **s_a , int index , int nb)
 {
     if(index <= (nb / 2))
     {
@@ -39,11 +39,11 @@ static void shift_all(stack **s_a , int index , int nb)
         }
     }  
 }
-static void min_in_top(stack **s_a)
+static void min_in_top(t_stack **s_a)
 {
     int index;
     int nb;
-    stack   *min_node;
+    t_stack   *min_node;
     min_node = return_min(*s_a);
     nb = count_nodes(*s_a);
     index = index_min(*s_a);
@@ -53,7 +53,7 @@ static void min_in_top(stack **s_a)
 }
 
 
-static void base_algo (stack **s_a , stack **s_b)
+static void base_algo (t_stack **s_a , t_stack **s_b)
 {
     int res;
     int temp;
@@ -79,22 +79,22 @@ static void base_algo (stack **s_a , stack **s_b)
         temp--;
     }
 }
-void simple_algo (stack **list)
+void simple_algo (t_stack **list)
 {
    base_algo(list , NULL);
 }
 // #include <stdio.h>
 // int main()
 // {
-//     stack *s_a = malloc(sizeof(stack));
-//     stack *node1 = malloc(sizeof(stack));
-//     stack *node2 = malloc(sizeof(stack));
-//      stack *node3 = malloc(sizeof(stack));
-//      stack *node4 = malloc(sizeof(stack));
-//       stack *node5 = malloc(sizeof(stack));
-//        stack *node6 = malloc(sizeof(stack));
-//         stack *node7 = malloc(sizeof(stack));
-//          stack *node8 = malloc(sizeof(stack));
+//     t_stack *s_a = malloc(sizeof(t_stack));
+//     t_stack *node1 = malloc(sizeof(t_stack));
+//     t_stack *node2 = malloc(sizeof(t_stack));
+//      t_stack *node3 = malloc(sizeof(t_stack));
+//      t_stack *node4 = malloc(sizeof(t_stack));
+//       t_stack *node5 = malloc(sizeof(t_stack));
+//        t_stack *node6 = malloc(sizeof(t_stack));
+//         t_stack *node7 = malloc(sizeof(t_stack));
+//          t_stack *node8 = malloc(sizeof(t_stack));
       
 //     s_a->nb = 1;
 //     node1->nb =  2;
@@ -119,7 +119,7 @@ void simple_algo (stack **list)
     
 
 
-//      stack *s_b =  NULL;
+//      t_stack *s_b =  NULL;
     
 //     simple_algo(&s_a , &s_b);
 //     while (s_a)
@@ -133,7 +133,7 @@ void simple_algo (stack **list)
 // #include <stdlib.h>
 // #include <time.h>
 
-// static int	has_duplicate(stack *head, int nb)
+// static int	has_duplicate(t_stack *head, int nb)
 // {
 // 	while (head)
 // 	{
@@ -144,11 +144,11 @@ void simple_algo (stack **list)
 // 	return (0);
 // }
 
-// static stack	*make_node(int nb)
+// static t_stack	*make_node(int nb)
 // {
-// 	stack	*node;
+// 	t_stack	*node;
 
-// 	node = malloc(sizeof(stack));
+// 	node = malloc(sizeof(t_stack));
 // 	if (!node)
 // 		return (NULL);
 // 	node->nb = nb;
@@ -156,10 +156,10 @@ void simple_algo (stack **list)
 // 	return (node);
 // }
 
-// static void	add_back(stack **head, int nb)
+// static void	add_back(t_stack **head, int nb)
 // {
-// 	stack	*node;
-// 	stack	*tmp;
+// 	t_stack	*node;
+// 	t_stack	*tmp;
 
 // 	node = make_node(nb);
 // 	if (!node)
@@ -175,9 +175,9 @@ void simple_algo (stack **list)
 // 	tmp->next = node;
 // }
 
-// static void	clear_stack(stack **head)
+// static void	clear_stack(t_stack **head)
 // {
-// 	stack	*tmp;
+// 	t_stack	*tmp;
 
 // 	while (head && *head)
 // 	{
@@ -189,8 +189,8 @@ void simple_algo (stack **list)
 
 // int	main(void)
 // {
-// 	stack	*s_a;
-// 	stack	*s_b;
+// 	t_stack	*s_a;
+// 	t_stack	*s_b;
 // 	int		i;
 // 	int		val;
 

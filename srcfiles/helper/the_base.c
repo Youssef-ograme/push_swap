@@ -3,7 +3,7 @@
 void check_algo_with_disorder(int argc , char **argv )
 {
     float nb ;
-    stack *node;
+    t_stack *node;
     node = return_nodes(argc ,argv);
     nb = compute_disorder(node);
     if (nb < 0.2)

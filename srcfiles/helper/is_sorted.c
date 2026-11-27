@@ -1,5 +1,5 @@
 #include "hedear.h"
-int is_sorted(stack *head)
+int is_sorted(t_stack *head)
 {
     while(head && head -> next)
     {

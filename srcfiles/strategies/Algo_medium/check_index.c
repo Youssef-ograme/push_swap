@@ -1,8 +1,8 @@
 #include "hedear.h"
 
-static t_indx *creat_index (int rank , int nb)
+static t_stack *creat_index (int rank , int nb)
 {
-    t_indx *new = malloc (sizeof (t_indx));
+    t_stack *new = malloc (sizeof (t_stack));
     if (!new)
         return NULL;
     new -> index = rank;
@@ -11,9 +11,9 @@ static t_indx *creat_index (int rank , int nb)
     return new;
 }
 
-static void	ft_indexadd_back(t_indx **lst, t_indx *new)
+static void	ft_indexadd_back(t_stack **lst, t_stack *new)
 {
-	t_indx	*current;
+	t_stack	*current;
 
 	if (!lst || !new)
 		return ;
@@ -28,13 +28,13 @@ static void	ft_indexadd_back(t_indx **lst, t_indx *new)
 	current->next = new;
 }
 
-t_indx *add_rank (stack *list)
+t_stack *add_rank (t_stack *list)
 {
     int rank;
-    stack *head1 = list;
-    stack *head2;
-    t_indx *new;
-    t_indx *new_nodes = NULL;
+    t_stack *head1 = list;
+    t_stack *head2;
+    t_stack *new;
+    t_stack *new_nodes = NULL;
     while (head1)
     {
         head2 = list;
@@ -55,7 +55,7 @@ t_indx *add_rank (stack *list)
 }
 
 // #include <stdio.h>
-// void print_nodes(t_indx *head)
+// void print_nodes(t_stack *head)
 // {
 //     while (head)
 //     {
@@ -65,15 +65,15 @@ t_indx *add_rank (stack *list)
 // }
 // int main ()
 // {
-//     stack a = {5, NULL};
-//     stack b = {2, NULL};
-//     stack c = {8, NULL};
-//     stack d = {1, NULL};
+//     t_stack a = {5, NULL};
+//     t_stack b = {2, NULL};
+//     t_stack c = {8, NULL};
+//     t_stack d = {1, NULL};
 
 //     a.next = &b;
 //     b.next = &c;
 //     c.next = &d;
-//     t_indx *res = add_rank(&a);
+//     t_stack *res = add_rank(&a);
 //     print_nodes(res);    
 //     return (0);
 // }

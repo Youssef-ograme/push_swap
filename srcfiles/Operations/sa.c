@@ -1,8 +1,8 @@
 #include "hedear.h"
-void sa(stack **head)
+void sa(t_stack **head)
 {
-    stack *node3;
-    stack *node2;
+    t_stack *node3;
+    t_stack *node2;
     if(!head || !*head || !(*head) -> next)
         return ;
     node2 = (*head) -> next;

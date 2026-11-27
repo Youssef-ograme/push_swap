@@ -1,5 +1,5 @@
 #include "hedear.h"
-static stack	*last_node(stack *s_a)
+static t_stack	*last_node(t_stack *s_a)
 {
 	if (!s_a)
 		return (NULL);
@@ -7,9 +7,9 @@ static stack	*last_node(stack *s_a)
 		s_a = s_a->next;
 	return (s_a);
 }
-static stack	*llast_node(stack *s_a)
+static t_stack	*llast_node(t_stack *s_a)
 {
-    stack *last;
+    t_stack *last;
     last = last_node(s_a);
 	if (!s_a)
 		return (NULL);
@@ -17,12 +17,12 @@ static stack	*llast_node(stack *s_a)
 		s_a = s_a->next;
 	return (s_a);
 }
-void rra(stack **s_a)
+void rra(t_stack **s_a)
 {
     if(!s_a || !(*s_a) || !(*s_a)->next)
         return ;
-    stack *last1;
-    stack *last2;
+    t_stack *last1;
+    t_stack *last2;
     last1 = last_node(*s_a);
     last2 = llast_node(*s_a);
     last1 -> next = (*s_a);
@@ -33,10 +33,10 @@ void rra(stack **s_a)
 // #include <stdio.h>
 // int main()
 // {
-//     stack *head = malloc(sizeof(stack));
-//     stack *node1 = malloc(sizeof(stack));
-//     stack *node2 = malloc(sizeof(stack));
-//     stack *node3 = malloc(sizeof(stack));
+//     t_stack *head = malloc(sizeof(t_stack));
+//     t_stack *node1 = malloc(sizeof(t_stack));
+//     t_stack *node2 = malloc(sizeof(t_stack));
+//     t_stack *node3 = malloc(sizeof(t_stack));
 //     head -> nb = 11;
 //     node1 -> nb = 1;
 //     node2 -> nb = 2;
@@ -46,10 +46,10 @@ void rra(stack **s_a)
 //     node2 -> next = node3;
 //     node3 -> next = NULL;
 
-//     stack *Head = malloc(sizeof(stack));
-//     stack *Code1 = malloc(sizeof(stack));
-//     stack *Code2 = malloc(sizeof(stack));
-//     stack *Code3 = malloc(sizeof(stack));
+//     t_stack *Head = malloc(sizeof(t_stack));
+//     t_stack *Code1 = malloc(sizeof(t_stack));
+//     t_stack *Code2 = malloc(sizeof(t_stack));
+//     t_stack *Code3 = malloc(sizeof(t_stack));
 //     Head -> nb = 1115;
 //     Code1 -> nb = 1;
 //     Code2 -> nb = 2;

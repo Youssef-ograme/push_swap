@@ -1,5 +1,5 @@
 #include "hedear.h"
-static int find_pose(t_indx *list , int target)
+static int find_pose(t_stack *list , int target)
 {
     int pose;
     pose = 0;
@@ -10,21 +10,21 @@ static int find_pose(t_indx *list , int target)
     }
     return pose;
 }
-static void bring_to_top(t_indx **b, int pose, int size)
+static void bring_to_top(t_stack **b, int pose, int size)
 {
     int i;
     i = 0;
     if (pose <= size / 2)
         while (i++ < pose)
-            rb_index(b);
+            rb(b);
     else
         while (i++ < size - pose)
-            rrb_index(b);
+            rrb(b);
 }
 
-void add_finish (stack **head , t_indx *stack_a)
+void add_finish (t_stack **head , t_stack *stack_a)
 {
-	stack *new;
+	t_stack *new;
 	new = *head;
 
 	while (new && stack_a)
@@ -35,10 +35,10 @@ void add_finish (stack **head , t_indx *stack_a)
 	}
 }
 
-void res_from_stack_A(stack **list)
+void res_from_stack_A(t_stack **list)
 {
-    t_indx *res_stack_b;   
-    t_indx *stack_a = NULL;
+    t_stack *res_stack_b;   
+    t_stack *stack_a = NULL;
     int total;
     int pose;
     int size;
@@ -50,7 +50,7 @@ void res_from_stack_A(stack **list)
     {
         pose = find_pose(res_stack_b , total);
         bring_to_top(&res_stack_b ,pose ,size);
-        pa_index(&stack_a ,&res_stack_b);
+        pa(&stack_a ,&res_stack_b);
         total--;
         size--;
     }
@@ -59,7 +59,7 @@ void res_from_stack_A(stack **list)
 
 
 // #include <stdio.h>
-// void print_nodes(stack *head)
+// void print_nodes(t_stack *head)
 // {
 //     while (head)
 //     {
@@ -71,9 +71,9 @@ void res_from_stack_A(stack **list)
 // #include <stdio.h>
 // #include "hedear.h"
 
-// void	free_nodes(stack *head)
+// void	free_nodes(t_stack *head)
 // {
-// 	stack	*tmp;
+// 	t_stack	*tmp;
 
 // 	while (head)
 // 	{
@@ -82,9 +82,9 @@ void res_from_stack_A(stack **list)
 // 		head = tmp;
 // 	}
 // }
-// void	free_nodes2(stack *head)
+// void	free_nodes2(t_stack *head)
 // {
-// 	stack	*tmp;
+// 	t_stack	*tmp;
 
 // 	while (head)
 // 	{
@@ -96,25 +96,25 @@ void res_from_stack_A(stack **list)
 
 // int	main(void)
 // {
-// 	stack	*a;
-// 	stack	*b;
-// 	stack	*c;
-// 	stack	*d;
-// 	stack	*e;
-// 	stack	*f;
-// 	stack	*g;
-// 	stack	*h;
-// 	stack	*i;
+// 	t_stack	*a;
+// 	t_stack	*b;
+// 	t_stack	*c;
+// 	t_stack	*d;
+// 	t_stack	*e;
+// 	t_stack	*f;
+// 	t_stack	*g;
+// 	t_stack	*h;
+// 	t_stack	*i;
 
-// 	a = malloc(sizeof(stack));
-// 	b = malloc(sizeof(stack));
-// 	c = malloc(sizeof(stack));
-// 	d = malloc(sizeof(stack));
-// 	e = malloc(sizeof(stack));
-// 	f = malloc(sizeof(stack));
-// 	g = malloc(sizeof(stack));
-// 	h = malloc(sizeof(stack));
-// 	i = malloc(sizeof(stack));
+// 	a = malloc(sizeof(t_stack));
+// 	b = malloc(sizeof(t_stack));
+// 	c = malloc(sizeof(t_stack));
+// 	d = malloc(sizeof(t_stack));
+// 	e = malloc(sizeof(t_stack));
+// 	f = malloc(sizeof(t_stack));
+// 	g = malloc(sizeof(t_stack));
+// 	h = malloc(sizeof(t_stack));
+// 	i = malloc(sizeof(t_stack));
 
 // 	if (!a || !b || !c || !d || !e || !f || !g || !h || !i)
 // 		return (1);

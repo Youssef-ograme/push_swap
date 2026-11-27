@@ -1,5 +1,5 @@
 #include "hedear.h"
-static stack	*last_node(stack *s_a)
+static t_stack	*last_node(t_stack *s_a)
 {
 	if (!s_a)
 		return (NULL);
@@ -8,13 +8,13 @@ static stack	*last_node(stack *s_a)
 	return (s_a);
 }
 
-void ra(stack **s_a)
+void ra(t_stack **s_a)
 {
     if(!s_a || !(*s_a) || !(*s_a)->next)
         return ;
-    stack *end;
-    stack *second;
-    stack *last;
+    t_stack *end;
+    t_stack *second;
+    t_stack *last;
     last = last_node(*s_a);
     end = (*s_a);
     second = (*s_a) -> next;

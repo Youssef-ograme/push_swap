@@ -1,5 +1,5 @@
 #include "hedear.h"
-int count_nodes(stack *head)
+int count_nodes(t_stack *head)
 {
     int count;
     count = 0;

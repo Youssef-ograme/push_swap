@@ -1,7 +1,7 @@
 #include "hedear.h"
-void	ft_lstadd_back(stack **lst, stack *new)
+void	ft_lstadd_back(t_stack **lst, t_stack *new)
 {
-	stack	*last;
+	t_stack	*last;
 
 	if (!lst || !new)
 		return ;

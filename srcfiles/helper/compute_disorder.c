@@ -1,10 +1,10 @@
 #include "hedear.h"
-float compute_disorder (stack *S_a)
+float compute_disorder (t_stack *S_a)
 {
     float mistakes;
     float total_pairs;
-    stack *temp1;
-    stack *temp2;
+    t_stack *temp1;
+    t_stack *temp2;
 
     temp1 = S_a;
     temp2 = S_a;
@@ -31,19 +31,19 @@ float compute_disorder (stack *S_a)
 // #include <stdio.h>
 // int main(void)
 // {
-//     stack *head;
-//     stack *n1;
-//     stack *n2;
-//     stack *n3;
-//     stack *n4;
+//     t_stack *head;
+//     t_stack *n1;
+//     t_stack *n2;
+//     t_stack *n3;
+//     t_stack *n4;
 
 //     /* LOW: 1 mistake / 45 pairs = 0.0222 */
 
-//     head = malloc(sizeof(stack));
-//     n1 = malloc(sizeof(stack));
-//     n2 = malloc(sizeof(stack));
-//     n3 = malloc(sizeof(stack));
-//     n4 = malloc(sizeof(stack));
+//     head = malloc(sizeof(t_stack));
+//     n1 = malloc(sizeof(t_stack));
+//     n2 = malloc(sizeof(t_stack));
+//     n3 = malloc(sizeof(t_stack));
+//     n4 = malloc(sizeof(t_stack));
 
 //     head->nb = 1;
 //     n1->nb = 2;
@@ -67,11 +67,11 @@ float compute_disorder (stack *S_a)
 
 //     /* MEDIUM: 10 mistakes / 45 pairs = 0.2222 */
 
-//     head = malloc(sizeof(stack));
-//     n1 = malloc(sizeof(stack));
-//     n2 = malloc(sizeof(stack));
-//     n3 = malloc(sizeof(stack));
-//     n4 = malloc(sizeof(stack));
+//     head = malloc(sizeof(t_stack));
+//     n1 = malloc(sizeof(t_stack));
+//     n2 = malloc(sizeof(t_stack));
+//     n3 = malloc(sizeof(t_stack));
+//     n4 = malloc(sizeof(t_stack));
 
 //     head->nb = 1;
 //     n1->nb = 2;
@@ -100,11 +100,11 @@ float compute_disorder (stack *S_a)
 
 //     /* HIGH: Reverse sorted */
 
-//     head = malloc(sizeof(stack));
-//     n1 = malloc(sizeof(stack));
-//     n2 = malloc(sizeof(stack));
-//     n3 = malloc(sizeof(stack));
-//     n4 = malloc(sizeof(stack));
+//     head = malloc(sizeof(t_stack));
+//     n1 = malloc(sizeof(t_stack));
+//     n2 = malloc(sizeof(t_stack));
+//     n3 = malloc(sizeof(t_stack));
+//     n4 = malloc(sizeof(t_stack));
 
 //     head->nb = 10;
 //     n1->nb = 9;

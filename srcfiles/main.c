@@ -20,7 +20,7 @@ int main(int argc , char **argv)
 // #include <stdlib.h>
 // #include <stdio.h>
 // #include "hedear.h"
-// void print_nodes(stack *head)
+// void print_nodes(t_stack *head)
 // {
 //     while (head)
 //     {
@@ -29,9 +29,9 @@ int main(int argc , char **argv)
 //     }
 // }
 
-// void	free_nodes(stack *head)
+// void	free_nodes(t_stack *head)
 // {
-// 	stack	*tmp;
+// 	t_stack	*tmp;
 
 // 	while (head)
 // 	{
@@ -40,9 +40,9 @@ int main(int argc , char **argv)
 // 		head = tmp;
 // 	}
 // }
-// void	free_nodes2(stack *head)
+// void	free_nodes2(t_stack *head)
 // {
-// 	stack	*tmp;
+// 	t_stack	*tmp;
 
 // 	while (head)
 // 	{
@@ -54,25 +54,25 @@ int main(int argc , char **argv)
 
 // int	main(void)
 // {
-// 	stack	*a;
-// 	stack	*b;
-// 	stack	*c;
-// 	stack	*d;
-// 	stack	*e;
-// 	stack	*f;
-// 	stack	*g;
-// 	stack	*h;
-// 	stack	*i;
+// 	t_stack	*a;
+// 	t_stack	*b;
+// 	t_stack	*c;
+// 	t_stack	*d;
+// 	t_stack	*e;
+// 	t_stack	*f;
+// 	t_stack	*g;
+// 	t_stack	*h;
+// 	t_stack	*i;
 
-// 	a = malloc(sizeof(stack));
-// 	b = malloc(sizeof(stack));
-// 	c = malloc(sizeof(stack));
-// 	d = malloc(sizeof(stack));
-// 	e = malloc(sizeof(stack));
-// 	f = malloc(sizeof(stack));
-// 	g = malloc(sizeof(stack));
-// 	h = malloc(sizeof(stack));
-// 	i = malloc(sizeof(stack));
+// 	a = malloc(sizeof(t_stack));
+// 	b = malloc(sizeof(t_stack));
+// 	c = malloc(sizeof(t_stack));
+// 	d = malloc(sizeof(t_stack));
+// 	e = malloc(sizeof(t_stack));
+// 	f = malloc(sizeof(t_stack));
+// 	g = malloc(sizeof(t_stack));
+// 	h = malloc(sizeof(t_stack));
+// 	i = malloc(sizeof(t_stack));
 
 // 	if (!a || !b || !c || !d || !e || !f || !g || !h || !i)
 // 		return (1);

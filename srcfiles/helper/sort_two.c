@@ -1,8 +1,8 @@
 #include "hedear.h"
-void  sort_two(stack **head)
+void  sort_two(t_stack **head)
 {
-    stack *start;
-    stack *min;
+    t_stack *start;
+    t_stack *min;
 
     min = return_min(*head);
     start = (*head);

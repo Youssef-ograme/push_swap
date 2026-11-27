@@ -1,9 +1,9 @@
 #include "hedear.h"
-stack	*ft_lstnew(int n)
+t_stack	*ft_lstnew(int n)
 {
-	stack	*new;
+	t_stack	*new;
 
-	new = malloc(sizeof(stack));
+	new = malloc(sizeof(t_stack));
 	if (!new)
 		return (NULL);
 	new-> nb = n;

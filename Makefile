@@ -36,11 +36,6 @@ SRCES = $(SRCF)/check_error/check.c \
 		$(SRCF)/strategies/Algo_medium/from_A_to_B.c \
 		$(SRCF)/strategies/Algo_medium/from_B_to_A.c \
 		$(SRCF)/strategies/Algo_medium/ft_sqrt_swap.c \
-		$(SRCF)/strategies/Algo_medium/pa.c \
-		$(SRCF)/strategies/Algo_medium/pb.c \
-		$(SRCF)/strategies/Algo_medium/ra.c \
-		$(SRCF)/strategies/Algo_medium/rb.c \
-		$(SRCF)/strategies/Algo_medium/rrb.c \
 		$(SRCF)/create_nodes/ft_lstadd_back.c \
 		$(SRCF)/create_nodes/ft_lstnew.c \
 		$(SRCF)/create_nodes/ft_lstlast.c \

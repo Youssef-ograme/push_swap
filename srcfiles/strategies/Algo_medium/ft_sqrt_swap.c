@@ -8,7 +8,7 @@ static int ft_sqrt(int nb)
     return i;
 }
 
-void total_numbers(stack *head , int *total)
+void total_numbers(t_stack *head , int *total)
 {
     *total = 0;
     while (head)
@@ -17,7 +17,7 @@ void total_numbers(stack *head , int *total)
         head = head -> next;
     }
 }
-int som_of_sqrt(stack *head , int *total)
+int som_of_sqrt(t_stack *head , int *total)
 {
     total_numbers(head ,total);
     return ft_sqrt(*total);
